@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tequila Company</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Our Tequila</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to [Your Tequila Brand]</h1>
+    </header>
+
+    <section id="home" class="home-section">
+        <h2>Experience the Spirit of Mexico</h2>
+        <p>Discover the finest handcrafted tequila, made with passion and tradition.</p>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>We are dedicated to producing the highest quality tequila, using traditional methods and the finest agave. Our passion for tequila is rooted in the rich history and culture of Mexico.</p>
+        <img src="about-us.jpg" alt="About Us" class="about-image">
+    </section>
+
+    <section id="products" class="products-section">
+        <h2>Our Tequila</h2>
+        <div class="product-gallery">
+            <div class="product-card" onclick="openModal('blanco')">
+                <img src="tequila-blanco.jpg" alt="Tequila Blanco">
+                <h3>Tequila Blanco</h3>
+            </div>
+            <div class="product-card" onclick="openModal('reposado')">
+                <img src="tequila-reposado.jpg" alt="Tequila Reposado">
+                <h3>Tequila Reposado</h3>
+            </div>
+            <div class="product-card" onclick="openModal('anejo')">
+                <img src="tequila-anejo.jpg" alt="Tequila Añejo">
+                <h3>Tequila Añejo</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Your Tequila Brand]. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for Product Details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
